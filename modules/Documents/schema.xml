@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_documentmodulesrel</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_documentmodulesrel` (
+			  `tabid` int(19) NOT NULL,
+			  `modulename` varchar(25) NOT NULL,
+			  `modulelabel` varchar(25) NOT NULL,
+			  `defaultfolder` int(19),
+			  `multiplerecords` BOOLEAN,
+			  `enabled` BOOLEAN
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8
+            ]]></sql>
+		</table>
+		<table>
+			<name>vtiger_documentmodulesrel</name>
+			<sql><![CDATA[INSERT vtiger_documentmodulesrel (
+			tabid, modulename, modulelabel, defaultfolder, multiplerecords, enabled
+			) SELECT tabid, name, tablabel, 1, false, false FROM vtiger_tab WHERE isentitytype=1 AND tabid NOT IN (8,9,10,16,28,35,39,40)
+            ]]></sql>
+		</table>
+		<table>
+			<name>vtiger_notes</name>
+			<sql><![CDATA[ALTER TABLE vtiger_notes ADD (
+			  `filepath` text,
+			  `multiple` INT(1),
+			  `related_to` INT(19),
+			  `fileurl` text
+
+			) ]]></sql>
+		</table>
+		<table>
+			<name>vtiger_attachmentsfolder</name>
+			<sql><![CDATA[ALTER TABLE vtiger_attachmentsfolder ADD (
+			  `parentid` INT(11)
+			) ]]></sql>
+		</table>
+		<table>
+			<name>vtiger_attachmentsfolder</name>
+			<sql><![CDATA[UPDATE vtiger_attachmentsfolder SET parentid=0]]></sql>
+		</table>
+		<table>
+			<name>vtiger_cvcolumnlist</name>
+			<sql><![CDATA[INSERT vtiger_cvcolumnlist SET cvid=22, columnindex=0, columnname='vtiger_notes:folderid:folderid:Notes_Folderid:I']]></sql>
+		</table>
+		<table>
+			<name>vtiger_cvcolumnlist</name>
+			<sql><![CDATA[INSERT vtiger_cvcolumnlist SET cvid=22, columnindex=-1, columnname='vtiger_notes:filepath:filepath:Notes_Path:N']]></sql>
+		</table>
+		<table>
+			<name>vtiger_links</name>
+			<sql><![CDATA[INSERT vtiger_links SET linkid=(SELECT id+1 FROM vtiger_links_seq), tabid=8, linktype='LISTVIEWSIDEBARWIDGET', linklabel='Folders', linkurl='module=Documents&view=ListFolders']]></sql>
+		</table>
+		<table>
+			<name>vtiger_links</name>
+			<sql><![CDATA[UPDATE vtiger_links_seq SET id=(SELECT MAX(linkid) FROM vtiger_links)]]></sql>
+		</table>
+	</tables>
+</schema>

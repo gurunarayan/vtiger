@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_pointsale</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_pointsale` ( `pointsaleid` int(50) NOT NULL,`pointsale_no` varchar(100) DEFAULT NULL, `pointsalename` varchar(250) NOT NULL, `total_amt` decimal(10,3) NULL, `paid_amt` decimal(10,3) NULL, `return_amt` decimal(10,3) NULL, `related_contact` varchar(100) NULL , PRIMARY KEY (`pointsaleid`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+		]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pointsalecf</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_pointsalecf` (`pointsaleid` int(50) NOT NULL , PRIMARY KEY (`pointsaleid`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+		]]></sql>
+		</table>
+		<table>
+			<name>vtiger_posdetails</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_posdetails` ( `posid` int(50) NULL, `productid` varchar(250) NULL, `price` decimal(10,3) NULL, `total_qty` decimal(10,3) NULL, `selected_qty` decimal(10,3) NULL, `taxpercent` decimal(10,3) NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+		]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pos_settings</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_pos_settings` ( tax int(19) NOT NULL, currency varchar(150) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+		]]></sql>
+		</table>
+		<table>
+			<name>vtiger_productcf</name>
+			<sql><![CDATA[ALTER TABLE vtiger_productcf ADD (
+		  `is_pos` INT(1)  DEFAULT NULL,
+		  `barcode` INT(50)  DEFAULT NULL ) ]]></sql>
+		</table>
+	</tables>
+</schema>

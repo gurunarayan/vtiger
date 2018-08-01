@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vk_login_failed_attempt</name>
+			<sql><![CDATA[ CREATE TABLE IF NOT EXISTS vk_login_failed_attempt (
+						id int(11) NOT NULL AUTO_INCREMENT,
+						userid int(11) NOT NULL,
+						total_attempt int(11) NOT NULL,
+						failed_date_n_time datetime NOT NULL,
+						PRIMARY KEY (id)
+						) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+				]]></sql>
+		</table>
+		<table>
+			<name>vtiger_user_config</name>
+			<sql><![CDATA[ CREATE TABLE IF NOT EXISTS vtiger_user_config (
+						id int(12) NOT NULL AUTO_INCREMENT,
+						failed_logins_criteria int(12) DEFAULT NULL,
+						max_login_attempts int(10) DEFAULT NULL,
+						UC_NAME_ONE varchar(200) DEFAULT NULL,
+						UC_EMAIL_ID_ONE varchar(200) DEFAULT NULL,
+						UC_NAME_TWO varchar(200) DEFAULT NULL,
+						UC_EMAIL_ID_TWO varchar(200) DEFAULT NULL,
+						Working_Hours_start varchar(30) DEFAULT NULL,
+						Working_Hours_end varchar(30) DEFAULT NULL,
+						weeks varchar(200) DEFAULT NULL,
+						holiday_lbl_val varchar(500) DEFAULT NULL,
+						status int(2) DEFAULT '1',
+						PRIMARY KEY (id)
+				) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;]]></sql>
+		</table>
+	</tables>
+</schema>

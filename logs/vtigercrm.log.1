@@ -1,0 +1,50 @@
+Fri Jul 27 06:22:13 2018,929 [9095] DEBUG VT - Exiting getActionid method ...
+Fri Jul 27 06:22:13 2018,929 [9095] DEBUG VT - Exiting isPermitted method ...
+Fri Jul 27 06:22:13 2018,929 [9095] DEBUG VT - Entering isPermitted(ProjectTask,CreateView,) method ...
+Fri Jul 27 06:22:13 2018,930 [9095] DEBUG VT - Entering getActionid(CreateView) method ...
+Fri Jul 27 06:22:13 2018,930 [9095] INFO VT - get Actionid CreateView
+Fri Jul 27 06:22:13 2018,930 [9095] INFO VT - action id selected is 7
+Fri Jul 27 06:22:13 2018,930 [9095] DEBUG VT - Exiting getActionid method ...
+Fri Jul 27 06:22:13 2018,930 [9095] DEBUG VT - Exiting isPermitted method ...
+Fri Jul 27 06:22:13 2018,930 [9095] DEBUG VT - Entering isPermitted(ProjectMilestone,CreateView,) method ...
+Fri Jul 27 06:22:13 2018,931 [9095] DEBUG VT - Entering getActionid(CreateView) method ...
+Fri Jul 27 06:22:13 2018,931 [9095] INFO VT - get Actionid CreateView
+Fri Jul 27 06:22:13 2018,931 [9095] INFO VT - action id selected is 7
+Fri Jul 27 06:22:13 2018,931 [9095] DEBUG VT - Exiting getActionid method ...
+Fri Jul 27 06:22:13 2018,931 [9095] DEBUG VT - Exiting isPermitted method ...
+Fri Jul 27 06:22:13 2018,931 [9095] DEBUG VT - Entering isPermitted(ProjectMilestone,CreateView,) method ...
+Fri Jul 27 06:22:13 2018,932 [9095] DEBUG VT - Entering getActionid(CreateView) method ...
+Fri Jul 27 06:22:13 2018,932 [9095] INFO VT - get Actionid CreateView
+Fri Jul 27 06:22:13 2018,932 [9095] INFO VT - action id selected is 7
+Fri Jul 27 06:22:13 2018,932 [9095] DEBUG VT - Exiting getActionid method ...
+Fri Jul 27 06:22:13 2018,933 [9095] DEBUG VT - Exiting isPermitted method ...
+Fri Jul 27 06:22:13 2018,934 [9095] DEBUG VT - Prepared sql query being executed : SELECT vtiger_attachments.attachmentsid, vtiger_attachments.path, vtiger_attachments.name FROM vtiger_attachments
+                                  LEFT JOIN vtiger_salesmanattachmentsrel ON vtiger_salesmanattachmentsrel.attachmentsid = vtiger_attachments.attachmentsid
+                                  WHERE vtiger_salesmanattachmentsrel.smid=?
+Fri Jul 27 06:22:13 2018,934 [9095] DEBUG VT - Prepared sql query parameters : [1]
+Fri Jul 27 06:22:13 2018,935 [9095] DEBUG VT - Prepared sql query being executed : SELECT rolename from vtiger_role WHERE roleid = ?
+Fri Jul 27 06:22:13 2018,935 [9095] DEBUG VT - Prepared sql query parameters : [H2]
+Fri Jul 27 06:22:13 2018,938 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_app2tab WHERE visible = ? ORDER BY appname,sequence
+Fri Jul 27 06:22:13 2018,938 [9095] DEBUG VT - Prepared sql query parameters : [1]
+Fri Jul 27 06:22:13 2018,992 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_blocks ORDER BY sequence
+Fri Jul 27 06:22:13 2018,993 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:13 2018,993 [9095] DEBUG VT - Prepared sql query parameters : [1,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:13 2018,996 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:13 2018,997 [9095] DEBUG VT - Prepared sql query parameters : [5,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:13 2018,998 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:13 2018,998 [9095] DEBUG VT - Prepared sql query parameters : [7,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:13 2018,1000 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:13 2018,1000 [9095] DEBUG VT - Prepared sql query parameters : [8,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,002 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,002 [9095] DEBUG VT - Prepared sql query parameters : [9,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,003 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,004 [9095] DEBUG VT - Prepared sql query parameters : [10,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,005 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,005 [9095] DEBUG VT - Prepared sql query parameters : [11,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,006 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,006 [9095] DEBUG VT - Prepared sql query parameters : [6,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,007 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,008 [9095] DEBUG VT - Prepared sql query parameters : [12,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,009 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtiger_settings_field WHERE blockid = ? AND active = 0 AND name NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?) ORDER BY sequence
+Fri Jul 27 06:22:14 2018,009 [9095] DEBUG VT - Prepared sql query parameters : [4,LBL_AUDIT_TRAIL,LBL_SYSTEM_INFO,LBL_PROXY_SETTINGS,LBL_DEFAULT_MODULE_VIEW,LBL_FIELDFORMULAS,LBL_FIELDS_ACCESS,LBL_MAIL_MERGE,NOTIFICATIONSCHEDULERS,INVENTORYNOTIFICATION,ModTracker,LBL_WORKFLOW_LIST,LBL_TOOLTIP_MANAGEMENT,Webforms Configuration Editor]
+Fri Jul 27 06:22:14 2018,011 [9095] DEBUG VT - Prepared sql query being executed : SELECT * FROM vtigress_themes

@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtigress_themes</name>
+			<sql><![CDATA[CREATE TABLE if not exists vtigress_themes (
+			  id int(11) NOT NULL AUTO_INCREMENT,
+			  name varchar(250) DEFAULT NULL,
+			  Status tinyint(1) DEFAULT NULL,
+			  PRIMARY KEY (id)
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			]]></sql>
+		</table>
+	</tables>
+</schema>
